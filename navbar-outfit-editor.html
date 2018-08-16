@@ -1,0 +1,360 @@
+<!-- navbar-outfit-editor.html (v1.2) -->
+
+<style>
+
+    #cssmenu, .cssmenu {
+        height:50px;
+        width:fit-content;
+        max-width:100%;
+        margin-left:auto;
+        margin-right:auto;
+        background:none;
+    }
+
+    #cssmenu > ul > li { 
+        height:-webkit-fill-available;
+        
+    }
+
+    .cssmenu > ul > li > a, 
+    #cssmenu > ul > li > a {
+        font-size:16px;
+        border:none;
+    }
+
+    .cssmenu > ul > li > a:after, 
+    #cssmenu > ul > li > a:after {
+        content:none;
+    }
+    
+    .navbar-brand {
+        display:inline-block;
+    }
+
+    .navbar-brand > span {
+        color:orange;
+        cursor:pointer;
+        font-size:20px;
+    }
+
+    .logo-img {
+        padding:5px;
+    }
+
+    li > a, 
+    li > a > span {
+        cursor:context-menu;
+    }
+    
+    a.pointer, .pointer,
+    a.pointer > span,
+    .pointer > span {
+        cursor:pointer;
+    }
+
+    .cssmenu ul li > ul li a, 
+    #cssmenu ul li > ul li a {
+        font-size:16px;
+    }
+
+    .cssmenu ul li.has-sub > ul > li.has-sub > a:before,
+    #cssmenu ul li.has-sub > ul > li.has-sub > a:before {
+        content: "";
+        position: absolute;
+        top: 18px;
+        right: 6px;
+        border: 5px solid transparent;
+        border-left: 5px solid #ffffff;
+    }
+
+    .cssmenu ul li.has-sub:hover > ul > li.has-sub > a:before,
+    #cssmenu ul li.has-sub:hover > ul > li.has-sub > a:before {
+        top: 12px;
+    }
+
+    .cssmenu ul li.has-sub > ul > li.has-sub > a:hover:before,
+    #cssmenu ul li.has-sub > ul > li.has-sub > a:hover:before {
+        border-left: 5px solid #ffffff;
+    }
+
+</style>
+
+<div id="cssmenu" tabindex="-1">
+
+    <ul tabindex="-1">
+
+        <li tabindex="-1">
+            <a tabindex="-1" href="https://anywhere3d.com" target="_blank" class="navbar-brand" title="anywhere3d.com"><span>anywhere3d </span></a>
+            <img tabindex="-1" width="50" height="50" class="logo-img" src="https://i.imgur.com/09bC4Q0.png" alt="anywhere3d logo">
+        </li>
+        
+        <li class="active" tabindex="-1"><a tabindex="-1" href="/" class="pointer"><span>Home</span></a></li>
+
+
+        <li class="active has-sub" tabindex="-1"><a tabindex="-1"><span>Male</span></a>
+            <ul tabindex="-1">
+                <li tabindex="-1" data-outfit="body"     data-asset="hmBody"        data-gender="male" data-remove="boxers" data-nudity="boxers"><a><span>Body</span></a></li>
+                <li tabindex="-1" data-outfit="hairs"    data-asset="hmHairs"       data-gender="male"><a><span>Hairs</span></a></li>
+                <li tabindex="-1" data-outfit="boxers"   data-asset="hmBoxers"      data-gender="male" data-remove="trousers,boxers"><a><span>Boxers</span></a></li>
+                <li tabindex="-1" data-outfit="tshirt"   data-asset="hmTshirt"      data-gender="male"><a><span>Tshirt</span></a></li>
+                <li tabindex="-1" data-outfit="tshirt"   data-asset="hmTshirtStamp" data-gender="male"><a><span>Tshirt</span></a></li>
+                <li tabindex="-1" data-outfit="trousers" data-asset="hmTrousers"    data-gender="male" data-remove="boxers" data-nudity="boxers"><a><span>Trousers</span></a></li>
+                <li tabindex="-1" data-outfit="shoes"    data-asset="hmSneakers"    data-gender="male"><a><span>Shoes</span></a></li>
+            </ul>
+        </li>
+
+        <li class="active has-sub" tabindex="-1"><a tabindex="-1"><span>Female</span></a>
+            <ul tabindex="-1">
+                <li data-outfit="body"     data-asset="fmBody"        data-gender="female" data-remove="bra,panties" data-nudity="bra,panties"><a><span>Body</span></a></li>
+                <li data-outfit="hairs"    data-asset="fmHairs"       data-gender="female"><a><span>Hairs</span></a></li>
+                <li data-outfit="bra"      data-asset="fmBra"         data-gender="female" data-remove="tshirt,dress"           data-nudity="bra"><a><span>Bra</span></a></li>
+                <li data-outfit="panties"  data-asset="fmPanties"     data-gender="female" data-remove="trousers,skirt,dress"   data-nudity="panties"><a><span>Panties</span></a></li>
+                <li data-outfit="tshirt"   data-asset="fmTshirt"      data-gender="female" data-remove="bra,dress"              data-nudity="bra"><a><span>Tshirt</span></a></li>
+                <li data-outfit="tshirt"   data-asset="fmTshirtStamp" data-gender="female" data-remove="bra,dress"              data-nudity="bra"><a><span>Tshirt stamp</span></a></li>
+                <li data-outfit="skirt"    data-asset="fmSkirt"       data-gender="female" data-remove="panties,trousers,dress" data-nudity="panties"><a><span>Skirt</span></a></li>
+                <li data-outfit="trousers" data-asset="fmTrousers"    data-gender="female" data-remove="panties,skirt,dress"    data-nudity="panties"><a><span>Trousers</span></a></li>
+                <li data-outfit="dress"    data-asset="fmDress"       data-gender="female" data-remove="panties,trousers,skirt,bra,tshirt" data-nudity="bra,panties"><a><span>Dress</span></a></li>
+                <li data-outfit="shoes"    data-asset="fmSandal"      data-gender="female"><a><span>Shoes</span></a></li>
+            </ul>
+        </li>
+
+
+        <li class="active has-sub" tabindex="-1"><a tabindex="-1"><span>Select</span></a>
+            <ul tabindex="-1">
+                <!-- li tabindex="-1" data-target="body"><a tabindex="-1"><span>Body</span></a></li -->
+                <!-- li tabindex="-1" data-target="body" data-index="1"><a tabindex="-1"><span>Eyes</span></a></li -->
+                <li tabindex="-1" data-target="hairs"><a tabindex="-1"><span>Hairs</span></a></li>
+                <li tabindex="-1" data-target="boxers"><a tabindex="-1"><span>Boxers</span></a></li>
+                <li tabindex="-1" data-target="panties"><a tabindex="-1"><span>Panties</span></a></li>
+                <li tabindex="-1" data-target="bra"><a tabindex="-1"><span>Bra</span></a></li>
+                <li tabindex="-1" data-target="tshirt"><a tabindex="-1"><span>Tshirt</span></a></li>
+                <li tabindex="-1" data-target="tshirt" data-index="1"><a tabindex="-1"><span>Stamp</span></a></li>
+                <li tabindex="-1" data-target="skirt"><a tabindex="-1"><span>Skirt</span></a></li>
+                <li tabindex="-1" data-target="trousers"><a tabindex="-1"><span>Trousers</span></a></li>
+                <li tabindex="-1" data-target="dress"><a tabindex="-1"><span>Dress</span></a></li>
+                <li tabindex="-1" data-target="shoes"><a tabindex="-1"><span>Shoes</span></a></li>
+            </ul>
+        </li>
+
+        <li class="active has-sub" tabindex="-1"><a tabindex="-1"><span>Editors</span></a>
+            <ul tabindex="-1">
+                <li tabindex="-1"><a tabindex="-1"><span>Skin Editor</span></a></li>
+                <li tabindex="-1"><a tabindex="-1"><span>Boxers Editor</span></a></li>
+                <li tabindex="-1"><a tabindex="-1"><span>Panties Editor</span></a></li>
+                <li tabindex="-1"><a tabindex="-1"><span>Bra Editor</span></a></li>
+                <li tabindex="-1"><a tabindex="-1"><span>Tshirt Editor</span></a></li>
+                <li tabindex="-1"><a tabindex="-1"><span>Stamp Editor</span></a></li>
+                <li tabindex="-1"><a tabindex="-1"><span>Dress Editor</span></a></li>
+                <li tabindex="-1"><a tabindex="-1"><span>Trousers Editor</span></a></li>
+                <li tabindex="-1"><a tabindex="-1"><span>Skirt Editor</span></a></li>
+                <li tabindex="-1"><a tabindex="-1"><span>Shoes Editor</span></a></li>
+            </ul>
+        </li>
+
+
+        <li class="active has-sub" tabindex="-1"><a tabindex="-1"><span>Libraries</span></a>
+            <ul tabindex="-1">
+                <li tabindex="-1" id="fabric-texture-catalog-button"><a tabindex="-1"><span>Fabric Library</span></a></li>
+                <li tabindex="-1"><a tabindex="-1"><span>Boxers Library</span></a></li>
+                <li tabindex="-1" id="outfit-panties-catalog-button"><a tabindex="-1"><span>Panties Library</span></a></li>
+                <li tabindex="-1" id="outfit-bra-catalog-button"><a tabindex="-1"><span>Bra Library</span></a></li>
+                <li tabindex="-1" id="outfit-tshirt-catalog-button"><a tabindex="-1"><span>Tshirt Library</span></a></li>
+                <li tabindex="-1" id="tshirt-stamp-catalog-button"><a tabindex="-1"><span>Stamp Library</span></a></li>
+                <li tabindex="-1" id="outfit-dress-catalog-button"><a tabindex="-1"><span>Dress Library</span></a></li>
+                <li tabindex="-1" id="outfit-trousers-catalog-button"><a tabindex="-1"><span>Trousers Library</span></a></li>
+                <li tabindex="-1" id="outfit-skirt-catalog-button"><a tabindex="-1"><span>Skirt Library</span></a></li>
+                <li tabindex="-1"><a tabindex="-1"><span>Shoes Library</span></a></li>
+            </ul>
+        </li>
+
+        <li class="active has-sub" tabindex="-1"><a tabindex="-1"><span>Texture</span></a>
+            <ul tabindex="-1">
+                <li tabindex="-1" id="target-map-options-button"><a tabindex="-1"><span>Map</span></a></li>
+                <li tabindex="-1"><a tabindex="-1"><span>EmissiveMap</span></a></li>
+                <li tabindex="-1"><a tabindex="-1"><span>BumpMap</span></a></li>
+                <li tabindex="-1"><a tabindex="-1"><span>NormalMap</span></a></li>
+            </ul>
+        </li>
+
+        <li class="active has-sub" tabindex="-1"><a tabindex="-1"><span>Avatars</span></a>
+            <ul tabindex="-1">
+                <li tabindex="-1" id="avatar-catalog-button"><a tabindex="-1"><span>Avatar Library</span></a></li>
+                <li tabindex="-1"><a tabindex="-1"><span>Outfit Library</span></a></li>
+            </ul>
+        </li>
+
+    </ul>
+
+</div>
+
+
+<script>
+
+//  menu-outfit-helpers.js
+
+//  Get parent.
+//  source: "https://stackoverflow.com/questions/1789892/access-parent-object-in-javascript"
+
+//  Initialize helpers.
+    $("[data-gender]").toArray().forEach( function( item, i ){
+        var gender = $(item).data("gender");
+        var name = $(item).data("outfit");
+        if ( !!localPlayer.outfit[ name ] ) {
+            $(item).find("a").text(["Remove", gender, name].join(" "));
+        } else {
+            $(item).find("a").text(["Add", gender, name].join(" "));
+        }
+    });
+
+    scene.add( localPlayer.outfit.direction );
+    console.log("direction added.");
+
+    $("[data-outfit]").on("click", outfitHelperClickHandler);
+
+    function outfitHelperClickHandler(){
+
+        var self = this;
+
+        var gender = $(self).data("gender");  // IMORTANT //
+        var asset  = $(self).data("asset");
+        var outfit = $(self).data("outfit");
+
+        var remove = $(self).data("remove");
+    //  debugMode && console.log( "remove:", remove );
+        if ( !!remove ) {
+            remove = remove.split(",");
+            debugMode && console.log( "remove:", remove );
+        }
+
+        var nudity = $(self).data("nudity");
+    //  debugMode && console.log( "nudity:", nudity );
+        if ( !!nudity ) {
+            nudity = nudity.split(",");
+            debugMode && console.log( "nudity:", nudity );
+        }
+
+        var string = "gender: %s, outfit: %s, asset: %s, remove: %o nudity: %o";
+        debugMode && console.log( string, gender, outfit, asset, remove, nudity );
+
+    //  Set gender.
+        if ( !localPlayer.outfit.getGender(gender) ){
+            localPlayer.outfit.removeAll();
+            localPlayer.outfit.setGender(gender);
+        }
+
+    //  Removed items.
+        if ( !!remove && remove.length > 0 ) {
+            remove.forEach( function( name, i ){
+                if ( !!localPlayer.outfit[ name ]) {
+                    localPlayer.outfit.remove( name );
+                }
+            });
+        }
+
+    //  Add/Remove outfit item.
+        if ( !localPlayer.outfit[ outfit ] ) {
+
+        //  Add outfit item.
+            localPlayer.outfit.add( {[ outfit ]: Avatars[ asset ]} );
+        //  $(self).find("a").text("Remove outfit " + outfit);
+
+        //  Define as target material.
+            target = localPlayer.outfit[ outfit ].material.materials[0];
+
+        } else {
+
+        //  Remove outfit item.        
+            localPlayer.outfit.remove( outfit );
+
+        //  Nudity nudity.
+            if ( !!localPlayer.outfit.body ) {
+                if ( !!nudity && nudity.length > 0 ) {
+                    nudity.forEach( function( outfit, i ){
+                        var selector = [ "[", "data-outfit", "=", "'", outfit, "'", "]" ].join("");
+                        var element = $(selector).toArray()[0];
+                    //  debugMode && console.log( "addon element:", element );
+                        var asset = $(element).data("asset");
+                        localPlayer.outfit.add( {[ outfit ]: Avatars[ asset ]} );
+                    });
+                }
+            }
+
+        //  Undefine target.
+        //  target = undefined;
+
+        }
+
+        debugMode && console.log( "target:", !!target );
+
+    //  Update helpers text.
+        if ( $(self).data("gender") == "male" ){
+            $("[data-gender=male]").toArray().forEach( function( item, i ){
+                var name = $(item).data("outfit");
+                if ( !!localPlayer.outfit[ name ] ) {
+                    $(item).find("a").text(["Remove", gender, name].join(" "));
+                } else {
+                    $(item).find("a").text(["Add", gender, name].join(" "));
+                }
+            });
+            $("[data-gender=female]").toArray().forEach( function( item, i ){
+                var name = $(item).data("outfit");
+                $(item).find("a").text(["Add", "female", name].join(" "));
+            });
+        }
+
+        if ( $(self).data("gender") == "female" ){
+            $("[data-gender=female]").toArray().forEach( function( item, i ){
+                var name = $(item).data("outfit");
+                if ( !!localPlayer.outfit[ name ] ) {
+                    $(item).find("a").text(["Remove", gender, name].join(" "));
+                } else {
+                    $(item).find("a").text(["Add", gender, name].join(" "));
+                }
+            });
+            $("[data-gender=male]").toArray().forEach( function( item, i ){
+                var name = $(item).data("outfit");
+                $(item).find("a").text(["Add", "male", name].join(" "));
+            });
+        }
+    }
+
+</script>
+
+
+<script>
+
+//  menu-select.js
+
+    $("[data-target]").on("click", function(){
+
+        var name = $(this).data("target");
+
+        var index = 0;
+        if ( $(this).data("index") ){
+            index = $(this).data("index");
+        }
+
+        debugMode && console.log("index:", index);
+
+        if ( localPlayer.outfit[ name ] 
+          && localPlayer.outfit[ name ].material.materials[ index ] ) {
+
+            target = localPlayer.outfit[ name ].material.materials[ index ];
+
+        } else {
+        
+            target = undefined;
+
+        }
+
+        debugMode && console.log("target:", target);
+        
+    });
+
+</script>
+
+
+
+
+
+
